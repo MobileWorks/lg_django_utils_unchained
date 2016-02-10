@@ -5,16 +5,16 @@ from rest_framework.exceptions import ValidationError, PermissionDenied, \
 
 class ExceptionAPIView(APIView):
     def get(self, request, *args, **kwargs):
-        if request.query_params.get('permission'):
+        if 'permission' in request.query_params:
             raise PermissionDenied('uh oh, permission denied!')
 
-        if request.query_params.get('validate'):
+        if 'validate' in request.query_params:
             raise ValidationError("uh oh, something didn't validate")
 
-        if request.query_params.get('not-authed'):
+        if 'not-authed' in request.query_params:
             raise ValidationError("uh oh, you're not authenticated")
 
-        if request.query_params.get('not-found'):
+        if 'not-found' in request.query_params:
             raise ValidationError("uh oh, not found")
 
         raise Exception("uh oh")

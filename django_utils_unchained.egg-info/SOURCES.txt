@@ -1,0 +1,4 @@
+django_utils_unchained.egg-info/PKG-INFO
+django_utils_unchained.egg-info/SOURCES.txt
+django_utils_unchained.egg-info/dependency_links.txt
+django_utils_unchained.egg-info/top_level.txt
