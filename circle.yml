@@ -1,0 +1,3 @@
+test:
+    override:
+        - testing/scripts/run_tests.sh
