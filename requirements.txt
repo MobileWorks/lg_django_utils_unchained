@@ -1,6 +1,7 @@
 Celery==3.1.23
 boto==2.39.0
 Django==1.8.4
+djangorestframework==3.3.1
 django-test-without-migrations==0.2
 ipdb==0.8.1
 ipython==4.0.0
