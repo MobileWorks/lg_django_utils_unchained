@@ -1,12 +1,12 @@
 from __future__ import absolute_import
 
-from testing.test_project.celery import app
 from django.test.testcases import TestCase
 import requests
 
-from utils.exports import S3CSVExport
-from utils.formatters import CSVFormatter
-from testing.test_app.models import TestModel
+from lg_django_utils_unchained.testing.test_app.models import TestModel
+from lg_django_utils_unchained.testing.test_project.celery import app
+from lg_django_utils_unchained.utils.exports import S3CSVExport
+from lg_django_utils_unchained.utils.formatters import CSVFormatter
 
 
 class TestCSVFormatter(CSVFormatter):

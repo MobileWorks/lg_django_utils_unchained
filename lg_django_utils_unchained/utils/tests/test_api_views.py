@@ -1,8 +1,8 @@
 from django.core.urlresolvers import reverse
 from rest_framework.status import HTTP_200_OK
 
-from testing.test_project.celery import app
-from utils.testing import NiceAPITestCase
+from lg_django_utils_unchained.testing.test_project.celery import app
+from lg_django_utils_unchained.utils.testing import NiceAPITestCase
 
 
 @app.task

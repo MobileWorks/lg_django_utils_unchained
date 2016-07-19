@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url
-from utils.views import TaskStatusView
+from lg_django_utils_unchained.utils.views import TaskStatusView
 
 urlpatterns = [
     url(r'^tasks/status/?', TaskStatusView.as_view(), name='task_status')
