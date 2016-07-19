@@ -32,9 +32,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'utils',
     'test_without_migrations',
-    'testing.test_app',
+    'lg_django_utils_unchained.utils',
+    'lg_django_utils_unchained.testing.test_app',
 )
 
 MIDDLEWARE_CLASSES = (
