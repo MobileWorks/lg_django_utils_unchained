@@ -8,12 +8,12 @@ from rest_framework.response import Response
 from rest_framework.views import exception_handler
 
 
-SILENT_DRF_EXCEPTIONS = (
+SILENT_DRF_EXCEPTIONS = [
     ValidationError,
     PermissionDenied,
     NotAuthenticated,
     NotFound
-)
+]
 
 
 def custom_exception_handler(exc, context):
@@ -25,7 +25,7 @@ def custom_exception_handler(exc, context):
     """
     response = exception_handler(exc, context)
 
-    if not isinstance(exc, SILENT_DRF_EXCEPTIONS):
+    if not isinstance(exc, tuple(SILENT_DRF_EXCEPTIONS)):
         sentry_exception_handler(request=context['request']._request)
 
     logging.exception(exc.message, exc_info=exc)
